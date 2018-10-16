@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Bar</title>
+	<script type="text/javascript">
+
+		function find1(){
+			var store, find, filter,td, a, i;
+			find = document.getElementById('search');
+			filter = find.value.toUpperCase();
+			store = document.getElementById('wrapper');
+			tr= store.getElementsByTagName('tr');
+			for(i=0; i<tr.length ; i++){
+				td=tr[i].getElementsByTagName('td')[1];
+				if(td){
+					if(td.innerHTML.toUpperCase().indexOf(filter) > -1){
+						tr[i].style.display="";
+					}else{
+						tr[i].style.display="none";
+					}
+				}
+				
+			}
+		}
+	</script>
+
+</head>
+<body>
+
+<div id='header' style="margin-left: 35%;">
+	<input type="text" id="search" name="search" onkeyup="find1()" placeholder="Search By Name">
+</div>
+
+<div style="margin-top:20px;margin-left: 30%;">
+<table rules="all" id='wrapper' border>
+	<thead>
+		<tr>
+			<th>Emp Id</th>
+			<th>Emp Name</th>
+			<th>Emp Age</th>
+			<th>Emp Salary</th>
+			<th>Emp Timings</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Ram</td>
+			<td>21</td>
+			<td>25000</td>
+			<td>10 hrs</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Raman</td>
+			<td>23</td>
+			<td>20000</td>
+			<td>8 hrs</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Shyam</td>
+			<td>25</td>
+			<td>30000</td>
+			<td>8 hrs</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Akash</td>
+			<td>22</td>
+			<td>35000</td>
+			<td>9 hrs</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Satyam</td>
+			<td>26</td>
+			<td>30000</td>
+			<td>8 hrs</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array</title>
+	<script type="text/javascript">
+		function arra(){
+			var ar3= new Array("html","js","ajs","jq","css");
+			var x=document.getElementById('p1');
+			x.innerHTML=ar3.length;
+
+		}
+
+		function arra_rev(){
+			var ar3= new Array(1,2,3,4,8,4,5,7);
+			var x=document.getElementById('p2');
+			x.innerHTML=ar3.reverse();
+
+		}
+		// Literal
+		var ar=['html','css','javascript','ajs','jq'];
+		document.write("Number of array: "+ar.length);
+
+
+		// Regular
+		var ar1=new Array();
+		ar1[0]="hsdb";
+		ar1[1]="hsdb";
+		ar1[2]="hsdb";
+		document.write("<br>Number of array: "+ar1.length);
+
+
+		// Condensed
+		var ar2= new Array("html","js","ajs","jq","css");
+		document.write("<br>Number of array: "+ar2.length);
+
+	</script>
+</head>
+<body>
+<p id='p1'> Click on button</p>
+<button onclick="arra()">Ok</button>
+<p id='p2'> Click on button</p>
+<button onclick="arra_rev()">Reverse</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OEnrror</title>
+	<script type="text/javascript">
+		function Onerror(){
+			alert("Image Unloaded");
+		}
+	</script>
+</head>
+<body>
+<p>page Loaded Successfully.</p>
+<p>Once page Loaded it will show alert box.</p>
+
+<img src="bg01.jpg" height="200px" width="200px" onerror="Onerror()" alt="Image Resource Not Found">
+<!-- if image not found then it will display. -->
+<br><br>There is one But one is not which is showing message.<br><br>
+<img src="bg-01.jpg" height="200px" width="200px" onerror="Onerror()" alt="Image Resource Not Found">
+
+</body>
+</html>

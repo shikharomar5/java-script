@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- HTML5 -> lang=en -->
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- javascript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<title>See Header</title>
+	
+
+	<style type="text/css">
+		#pagetop{
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 120px;
+			background: #06C;
+			color: #fff;
+			font-size: 23px;
+			padding-top: 25px;
+			margin-bottom: 20px;
+			transition: height 1s linear 0s, padding .5s linear 0s;
+			text-align: center;
+			overflow: hidden;
+		}
+		#pagetop > #menu{
+			position: absolute;
+			bottom: 0px;
+			width: 100%;
+			background: #004A95;
+			text-align: center;
+			height:50px;
+			transition: height 0.3s linear 0s;
+		}
+		#wrapper{
+			margin-top: 230px;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		var pagetop, menu, ypos;
+		function yScroll(){
+			pagetop = document.getElementById('pagetop');
+			menu = document.getElementById('menu');
+			ypos = window.pageYOffset;
+
+			if(ypos > 150){
+				pagetop.style.height= '36px';
+				pagetop.style.paddingTop= '8px';
+				menu.style.height= '0px';
+			}else{
+				pagetop.style.height= '120px';
+				pagetop.style.paddingTop= '25px';
+				menu.style.height= '50px';
+			}
+		}
+		window.addEventListener("scroll",yScroll)
+	</script>
+</head>
+<body>
+
+<div id='pagetop'>
+	Header
+	<div id="menu">Menu System</div>	
+</div>
+
+<div id="wrapper">
+	<script type="text/javascript">
+		for(i=1;i<=40;i++){document.write("<h4 style='text-align:center'>"+i+". Dummy Page Content....</h4>");}
+	</script>
+</div>
+</body>
+</html>

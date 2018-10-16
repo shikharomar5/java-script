@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Selecting
+	</title>
+	<script type="text/javascript">
+		function uppercase(){
+			var x=document.getElementById("fname");
+			x.value = x.value.toUpperCase();
+		}
+		function lowercase(){
+			var x=document.getElementById("lname");
+			x.value = x.value.toLowerCase();
+		}	
+	</script>
+</head>
+<body>
+<label>First Name (Enter in Lower case)
+	<input type="text" id="fname" name="fname" onblur="uppercase()">  
+</label>
+<label>Last Name (Enter in Upper case)
+	<input id="lname" type="text" name="lname" onblur="lowercase()">  
+</label>
+
+</body>
+</html>
